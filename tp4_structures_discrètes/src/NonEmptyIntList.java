@@ -1,22 +1,29 @@
 public class NonEmptyIntList implements IntList{
 
+    int head;
+    IntList queue;
 
-    boolean isEmpty(){
+    public NonEmptyIntList(int head, IntList queue){
+        this.head = head;
+        this.queue = queue;
+    }
+
+    public boolean isEmpty(){
         return false;
     }
 
-    /** @param n   l'entier à ajouter dans la liste
-     * return      la liste à laquelle n est ajoutée
-     */
-    IntList cons(int n){
-
+    @Override
+    public IntList cons(int n){
+        return new NonEmptyIntList(n, this);
     }
 
-    /** @return    la longueur de la liste
-     */
-    int length();
+    @Override
+    public int length(){
+        return queue.length() + 1;
+    }
 
-    /** @return    un String représentant la liste
-     */
-    String toString();
+    @Override
+    public String toString(){
+        return("Liste non vide d'entiers")
+    }
 }

@@ -1,18 +1,22 @@
 public class EmptyIntList implements IntList {
 
-    boolean isEmpty(){
-        return true;
+    @Override
+    public boolean isEmpty() {
+        return false;
     }
 
-    IntList cons(int n){
-        return n;
+    @Override
+    public IntList cons(int n) {
+        return null;
     }
 
-    int length(){
+    @Override
+    public int length() {
         return 0;
     }
 
+    @Override
     String toString(){
-        return ("Vide");
+        return ("Liste vide");
     }
 }
