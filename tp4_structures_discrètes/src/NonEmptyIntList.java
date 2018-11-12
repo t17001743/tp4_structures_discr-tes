@@ -24,6 +24,6 @@ public class NonEmptyIntList implements IntList{
 
     @Override
     public String toString(){
-        return("Liste non vide d'entiers")
+        return("Liste non vide d'entiers");
     }
 }
